@@ -1,4 +1,4 @@
-# Worker + Cloudflare Cron Quickstart Template
+# Cron + Cloudflare Worker Quickstart Template
 
 A quickstart template for **scheduled jobs** built with **Cloudflare Workers**, leveraging **TypeScript** for type safety and **Wrangler CLI** for deployment.
 
