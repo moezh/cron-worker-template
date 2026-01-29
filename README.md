@@ -5,7 +5,6 @@ A quickstart template for **scheduled jobs** built with **Cloudflare Workers**, 
 ## Prerequisites
 
 - **Node.js** and **npm** must be installed.
-- **Wrangler CLI** must be installed for Cloudflare deployment.
 
 ## Getting Started
 
