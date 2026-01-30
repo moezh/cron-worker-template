@@ -7,6 +7,15 @@ export default {
   },
 
   async fetch(req: Request, env: Env, ctx: ExecutionContext) {
-    return new Response("This worker runs on a schedule.");
+    const result = await env.db
+      .prepare("SELECT DATETIME('now', 'localtime') as db")
+      .first();
+    return new Response(
+      JSON.stringify({
+        message: "This worker runs on a schedule.",
+        result,
+      }),
+      { headers: { "Content-Type": "application/json" } },
+    );
   },
 };

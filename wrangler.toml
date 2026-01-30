@@ -1,6 +1,12 @@
-name = "cron-template"
 main = "src/index.ts"
 compatibility_date = "2026-01-01"
+compatibility_flags = [ "nodejs_compat" ]
 
 [triggers]
 crons = ["*/10 * * * *"]
+
+[[d1_databases]]
+binding = "db"
+database_name = "cron-template"
+database_id = "7b2855ec-4106-425f-851c-4a730832a365"
+remote = true

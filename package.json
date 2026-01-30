@@ -1,8 +1,14 @@
 {
+  "config": {
+    "name": "cron-template"
+  },
   "scripts": {
     "dev": "wrangler dev --test-scheduled",
     "login": "wrangler login",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy --name $npm_package_config_name",
+    "db:info": "wrangler d1 info $npm_package_config_name",
+    "db:create": "wrangler d1 create --use-remote --binding db $npm_package_config_name",
+    "db:init": "wrangler d1 execute -y --remote --file=src/schema.sql $npm_package_config_name"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260129.0",
